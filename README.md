@@ -3,7 +3,5 @@
 
 - BootStrap Template 적용
 
-인사 서버용 Front 개발 : 동욱  
-재고 관리 서버 Front 개발 : 준모  
-메인 Front 개발 : 소림  
-메신저, 통계 Front 개발 : 현호
+공개소프트웨어 Spring 미어캣 FE 서버  
+개발 : 최현호, 안성훈, 박준모
