@@ -36,19 +36,28 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 React layouts
-import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
-import RTL from "layouts/rtl";
-import Notifications from "layouts/notifications";
-import Profile from "layouts/profile";
-import SignIn from "layouts/authentication/sign-in";
-import SignUp from "layouts/authentication/sign-up";
+import Dashboard from "features/dashboard";
+import Tables from "features/tables";
+import Billing from "features/billing";
+import RTL from "features/rtl";
+import Notifications from "features/notifications";
+import Profile from "features/profile";
+import SignIn from "features/authentication/sign-in";
+import SignUp from "features/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import MainPage from "features/main";
 
 const routes = [
+  {
+    type: "collapse",
+    name: "MainPage",
+    key: "mainpage",
+    icon: <Icon fontSize="small">assignment</Icon>,
+    route: "/",
+    component: <MainPage />,
+  },
   {
     type: "collapse",
     name: "Dashboard",
