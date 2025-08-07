@@ -1,16 +1,16 @@
 {
-  "name": "material-dashboard-2-react",
+  "name": "spring-meerkat-dashboard",
   "version": "2.2.0",
   "private": true,
-  "author": "Creative Tim",
+  "author": "CDBD",
   "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Dashboard 2 by Creative Tim",
+  "description": "CDBD FE Server",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
+    "url": "https://github.com/Team-CDBD/OpensourceFE/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
+    "url": "git+https://github.com/Team-CDBD/OpensourceFE.git"
   },
   "dependencies": {
     "@emotion/cache": "11.10.8",

@@ -44,6 +44,8 @@ import Notifications from "features/notifications";
 import Profile from "features/profile";
 import SignIn from "features/authentication/sign-in";
 import SignUp from "features/authentication/sign-up";
+import KafkaConfiguration from "features/configurations/kafka";
+import AlertSystemConfiguration from "features/configurations/alert-system";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -51,12 +53,34 @@ import MainPage from "features/main";
 
 const routes = [
   {
-    type: "collapse",
     name: "MainPage",
-    key: "mainpage",
-    icon: <Icon fontSize="small">assignment</Icon>,
+    key: "main-page",
     route: "/",
     component: <MainPage />,
+  },
+  {
+    name: "Sign In",
+    key: "sign-in",
+    route: "/authentication/sign-in",
+    component: <SignIn />,
+  },
+  {
+    name: "Sign Up",
+    key: "sign-up",
+    route: "/authentication/sign-up",
+    component: <SignUp />,
+  },
+  {
+    name: "RTL",
+    key: "rtl",
+    route: "/rtl",
+    component: <RTL />,
+  },
+  {
+    name: "Profile",
+    key: "profile",
+    route: "/profile",
+    component: <Profile />,
   },
   {
     type: "collapse",
@@ -68,7 +92,68 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "장애 알림 목록",
+    key: "notifications",
+    icon: <Icon fontSize="small">notifications</Icon>,
+    route: "/notifications",
+    component: <Notifications />,
+  },
+  {
+    type: "divider",
+    key: "divider-1",
+  },
+  {
+    type: "title",
+    title: "관리자 설정",
+    key: "settings",
+  },
+  {
+    type: "collapse",
+    name: "Kafka 설정",
+    key: "kafka",
+    icon: <Icon fontSize="small">electrical_services</Icon>,
+    route: "/config/kafka",
+    component: <KafkaConfiguration />,
+  },
+  {
+    type: "collapse",
+    name: "알람 시스템 설정",
+    key: "alert-system",
+    icon: <Icon fontSize="small">alarm</Icon>,
+    route: "/config/alert",
+    component: <AlertSystemConfiguration />,
+  },
+  {
+    type: "collapse",
+    name: "외부 연동 API 설정",
+    key: "export-api",
+    icon: <Icon fontSize="small">api</Icon>,
+    route: "/config/export-api",
+    component: <AlertSystemConfiguration />,
+  },
+  {
+    type: "collapse",
+    name: "계정 관리",
+    key: "account",
+    icon: <Icon fontSize="small">account_circle</Icon>,
+    route: "/config/account",
+    component: <AlertSystemConfiguration />,
+  },
+  {
+    type: "collapse",
+    name: "MCP 설정",
+    key: "mcp",
+    icon: <Icon fontSize="small">mediation</Icon>,
+    route: "/config/mcp",
+    component: <AlertSystemConfiguration />,
+  },
+  {
+    type: "divider",
+    key: "divider-2",
+  },
+  {
+    type: "collapse",
+    name: "테이블 보기 임시 페이지",
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
@@ -76,51 +161,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
+    name: "임시 페이지(런칭전 삭제 요망)",
     key: "billing",
     icon: <Icon fontSize="small">receipt_long</Icon>,
     route: "/billing",
     component: <Billing />,
-  },
-  {
-    type: "collapse",
-    name: "RTL",
-    key: "rtl",
-    icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
-    route: "/rtl",
-    component: <RTL />,
-  },
-  {
-    type: "collapse",
-    name: "Notifications",
-    key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
-    component: <Notifications />,
-  },
-  {
-    type: "collapse",
-    name: "Profile",
-    key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
-    component: <Profile />,
-  },
-  {
-    type: "collapse",
-    name: "Sign In",
-    key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
-    route: "/authentication/sign-in",
-    component: <SignIn />,
-  },
-  {
-    type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
   },
 ];
 
