@@ -46,6 +46,9 @@ import SignIn from "features/authentication/sign-in";
 import SignUp from "features/authentication/sign-up";
 import KafkaConfiguration from "features/configurations/kafka";
 import AlertSystemConfiguration from "features/configurations/alert-system";
+import ExportApiConfiguration from "features/configurations/export-api";
+import AccountConfiguration from "features/configurations/account";
+import McpConfiguration from "features/configurations/mcp";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -129,7 +132,7 @@ const routes = [
     key: "export-api",
     icon: <Icon fontSize="small">api</Icon>,
     route: "/config/export-api",
-    component: <AlertSystemConfiguration />,
+    component: <ExportApiConfiguration />,
   },
   {
     type: "collapse",
@@ -137,7 +140,7 @@ const routes = [
     key: "account",
     icon: <Icon fontSize="small">account_circle</Icon>,
     route: "/config/account",
-    component: <AlertSystemConfiguration />,
+    component: <AccountConfiguration />,
   },
   {
     type: "collapse",
@@ -145,7 +148,7 @@ const routes = [
     key: "mcp",
     icon: <Icon fontSize="small">mediation</Icon>,
     route: "/config/mcp",
-    component: <AlertSystemConfiguration />,
+    component: <McpConfiguration />,
   },
   {
     type: "divider",
